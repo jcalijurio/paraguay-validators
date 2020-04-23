@@ -51,4 +51,6 @@ export class ParaguayPlateValidator {
 
         return this._regexMotorcyclePlate.test(adjustedPlate);
     }
+
+    validate = (plate: string | null) => this.validateOldPlate(plate) || this.validateCarPlate(plate) || this.validateMotorcyclePlate(plate);
 }
