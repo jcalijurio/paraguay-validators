@@ -1,0 +1,21 @@
+{
+  "name": "paraguay-validators",
+  "version": "1.0.0",
+  "description": "Validator for Paraguay documents, phones, plates, postal codes",
+  "main": "./dist/index.js",
+  "types": ".dist/index.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "build": "tsc -d --removeComments"
+  },
+  "author": "Calweb Systems and Services of Brazil <calweb.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3"
+  }
+}
