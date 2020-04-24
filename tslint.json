@@ -1,0 +1,46 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "semicolon": true,
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "switch-default": true,
+        "no-switch-case-fall-through": false,
+        "max-line-length": [
+            true,
+            300
+        ],
+        "no-unused-expression": false,
+        "no-use-before-declare": false,
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "curly": false,
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "eofline": false,
+        "no-inferrable-types": true,
+        "no-debugger": true,
+        "no-trailing-whitespace": true,
+        "one-line": [
+            true,
+            "check-open-brace"
+        ],
+        "align": [
+            true,
+            "parameters",
+            "statements"
+        ]
+    },
+    "rulesDirectory": []
+}

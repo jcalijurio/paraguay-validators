@@ -1,5 +1,8 @@
 paraguay-validators
 ==============
+[![npm version](https://img.shields.io/npm/v/paraguay-validators.svg)](https://www.npmjs.com/package/paraguay-validators)
+[![Build Status](https://travis-ci.org/jcalijurio/paraguay-validators.svg)](https://travis-ci.org/jcalijurio/paraguay-validators)
+
 Paraguay RUC number and Car Plate validators / Validaciones de numero RUC y Placa de vehículo.
 
 ## Instalation ##

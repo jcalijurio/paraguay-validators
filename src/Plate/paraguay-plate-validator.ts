@@ -14,7 +14,7 @@ export class ParaguayPlateValidator {
             return false;
 
         const adjustedPlate = this._adjustContent(plate);
-        if (adjustedPlate.length != validSize)
+        if (adjustedPlate.length !== validSize)
             return false;
 
         return true;
@@ -39,18 +39,13 @@ export class ParaguayPlateValidator {
     }
 
     validateMotorcyclePlate(plate: string | null): boolean {
-        if (!plate)
-            return false;
-
-        if (this._regexCheckContent.test(plate))
+        if (!this._generalValidate(plate, 7))
             return false;
 
         const adjustedPlate = this._adjustContent(plate);
-        if (adjustedPlate.length != 7)
-            return false;
-
         return this._regexMotorcyclePlate.test(adjustedPlate);
     }
 
     validate = (plate: string | null) => this.validateOldPlate(plate) || this.validateCarPlate(plate) || this.validateMotorcyclePlate(plate);
+
 }

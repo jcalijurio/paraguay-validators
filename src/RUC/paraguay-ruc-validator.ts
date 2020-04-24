@@ -16,7 +16,7 @@ export class ParaguayRUCValidator {
             return false;
 
         const identityDigitsLength: number = adjustedRuc.length - 2;
-        let valueSum: number = 0;
+        let valueSum = 0;
         for (let index = identityDigitsLength, multiplier = 2; index >= 0; index -= 1, multiplier += 1) {
             valueSum += Number(adjustedRuc[index]) * multiplier;
         }
@@ -24,12 +24,13 @@ export class ParaguayRUCValidator {
         const mod = valueSum % this._baseMod;
         const verifyDigit = mod > 1 ? this._baseMod - mod : 0;
 
-        return adjustedRuc[identityDigitsLength + 1] == verifyDigit.toString();
+        return adjustedRuc[identityDigitsLength + 1] === verifyDigit.toString();
     }
 
     validateIndividualRUC = (ruc: string | null) =>
-        ruc && ruc.replace(this._regexAdjust, '').length == 8 && this.validateRUC(ruc);
+        ruc && ruc.replace(this._regexAdjust, '').length === 8 && this.validateRUC(ruc)
 
-    validateCompanyRUC = (ruc: string | null) => 
-        ruc && ruc.replace(this._regexAdjust, '').length == 9 && this.validateRUC(ruc);
+    validateCompanyRUC = (ruc: string | null) =>
+        ruc && ruc.replace(this._regexAdjust, '').length === 9 && this.validateRUC(ruc)
+
 }
