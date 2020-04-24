@@ -1,12 +1,22 @@
 {
   "name": "paraguay-validators",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Validator for Paraguay documents, phones, plates, postal codes",
-  "main": "./dist/index.js",
-  "types": ".dist/index.d.ts",
+  "main": "./paraguay-validators.js",
+  "types": "./paraguay-validators.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcalijurio/paraguay-validators.git"
+  },
+  "homepage": "https://github.com/jcalijurio/paraguay-validators",
+  "bugs": {
+    "url": "https://github.com/jcalijurio/paraguay-validators/issues"
+  },
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-    "build": "tsc -d --removeComments"
+    "build": "tsc -d --removeComments & npm run compile & npm run minify",
+    "compile": "browserify dist/paraguay-validators.js > dist/index.js",
+    "minify": "npx uglify-js --compress --output dist/paraguay-validators.min.js dist/index.js"
   },
   "author": "Calweb Systems and Services of Brazil <calweb.com.br>",
   "license": "MIT",
@@ -14,8 +24,12 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "chai": "^4.2.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-run-command": "0.0.10",
     "mocha": "^7.1.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }
