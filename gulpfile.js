@@ -13,7 +13,7 @@ task('command', cb =>
 );
 
 task('clean', () => 
-    del('./dist/index.js')
+    del('./dist/tmp.js')
 );
 
 task('upload', cb =>
