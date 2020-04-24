@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Paraguay Validators</title>
+    <meta name="description" content="Paraguay Validators">
+    <meta name="author" content="Jorge Calijurio">
+
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Paraguay Validators</h1>
+    <a href="https://github.com/jcalijurio/paraguay-validators">GitHub</a>
+
+    <script src="../../dist/paraguay-validators.min.js"></script>
+    <script>
+        
+        var validator = new ParaguayValidators();
+        var rucIsValid = validator.RUC.validateRUC('564823570'); // For Companies and Natural Persons
+        var companyRucIsValid = validator.RUC.validateCompanyRUC('564823570'); // Only for Companies
+        var personRucIsValid = validator.RUC.validateIndividualRUC('64823571'); // Only for Natural Persons
+
+        var plateIsValid = validator.Plate.validate('ABC123'); // For old and new formats
+        var oldPlateIsValid = validator.Plate.validateOldPlate('ABC123'); // Only old format.
+        var carPlateIsValid = validator.Plate.validateCarPlate('ABCD123'); // Only new Car Mercosul format of Paraguay.
+        var motoPlateValid = validator.Plate.validateMotorcyclePlate('123ABCD'); // Only new Motorcyle Mercosul format of Paraguay.
+
+        var result = 'RUC VALIDATION';
+        result += '\nGeneral RUC: ' + rucIsValid;
+        result += '\nCompany RUC: ' + companyRucIsValid;
+        result += '\nPerson RUC:' + personRucIsValid;
+
+        result += '\n\nPLATE VALIDATION';
+        result += '\nGeneral Plate: ' + plateIsValid;
+        result += '\nOld Plate: ' + oldPlateIsValid;
+        result += '\nCar Plate:' + carPlateIsValid;
+        result += '\nMotorcycle Plate: ' + motoPlateValid;
+
+        alert(result);
+    </script>
+</body>
+
+</html>

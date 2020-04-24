@@ -5,6 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
+        "comment-format": false,
         "semicolon": true,
         "triple-equals": [
             true,

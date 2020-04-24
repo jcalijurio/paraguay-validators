@@ -1,6 +1,6 @@
 {
   "name": "paraguay-validators",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Validator for Paraguay documents, phones, plates, postal codes",
   "main": "./paraguay-validators.js",
   "types": "./paraguay-validators.d.ts",
@@ -18,8 +18,8 @@
     "test:coverage": "nyc --reporter=html --temp-dir=./coverage/tmp --report-dir=./coverage/report npm run test:run",
     "test": "npm run test:lint & npm run test:coverage",
     "build": "tsc -d --removeComments & npm run compile & npm run minify",
-    "compile": "browserify dist/paraguay-validators.js > dist/index.js",
-    "minify": "npx uglify-js --compress --output dist/paraguay-validators.min.js dist/index.js"
+    "compile": "browserify src/index.ts -p [ tsify --noImplicitAny ] > dist/tmp.js",
+    "minify": "npx uglify-js --compress --output dist/paraguay-validators.min.js dist/tmp.js"
   },
   "keywords": [
     "validator",
@@ -47,7 +47,8 @@
     "nyc": "^15.0.1",
     "ts-node": "^8.9.0",
     "tslint": "^6.1.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "tsify": "^4.0.1"
   },
   "dependencies": {}
 }
