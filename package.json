@@ -1,6 +1,6 @@
 {
   "name": "paraguay-validators",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Validator for Paraguay documents, phones, plates, postal codes",
   "main": "./paraguay-validators.js",
   "types": "./paraguay-validators.d.ts",
@@ -41,14 +41,15 @@
     "chai": "^4.2.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9",
     "gulp-istanbul": "^1.1.3",
     "gulp-run-command": "0.0.10",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
     "ts-node": "^8.9.0",
+    "tsify": "^4.0.1",
     "tslint": "^6.1.1",
-    "typescript": "^3.8.3",
-    "tsify": "^4.0.1"
+    "typescript": "^3.8.3"
   },
   "dependencies": {}
 }
