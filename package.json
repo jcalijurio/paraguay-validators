@@ -1,6 +1,6 @@
 {
   "name": "paraguay-validators",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Validator for Paraguay documents, phones, plates, postal codes",
   "main": "./paraguay-validators.js",
   "types": "./paraguay-validators.d.ts",

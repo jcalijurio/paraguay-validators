@@ -12,8 +12,9 @@ task('command', cb =>
         .then(() => cb())
 );
 
-task('clean', () => 
-    del('./dist/tmp.js')
+task('clean', cb => 
+    del(['./dist/tmp.js', './dist/index.d.ts', './dist/index.js'])
+        .then(() => cb())
 );
 
 task('upload', cb =>

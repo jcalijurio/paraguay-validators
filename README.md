@@ -48,7 +48,29 @@ const carIsValid = validator.Plate.validateCarPlate('ABCD123'); // Only new Car 
 const motoValid = validator.Plate.validateMotorcyclePlate('123ABCD'); // Only new Motorcyle Mercosul format of Paraguay.
 ```
 
-### ROADMAP ###
+## On Browser ##
+
+### Script Reference ###
+
+```html
+<script src="node_modules/paraguay-validators/paraguay-validators.min.js"></script>
+```
+
+### Validations ###
+
+```javascript
+var validator = new ParaguayValidators();
+var rucIsValid = validator.RUC.validateRUC('564823570'); // For Companies and Natural Persons
+var companyRucIsValid = validator.RUC.validateCompanyRUC('564823570'); // Only for Companies
+var personRucIsValid = validator.RUC.validateIndividualRUC('64823571'); // Only for Natural Persons
+
+var plateIsValid = validator.Plate.validate('ABC123'); // For old and new formats
+var oldPlateIsValid = validator.Plate.validateOldPlate('ABC123'); // Only old format.
+var carPlateIsValid = validator.Plate.validateCarPlate('ABCD123'); // Only new Car Mercosul format of Paraguay.
+var motoPlateValid = validator.Plate.validateMotorcyclePlate('123ABCD'); // Only new Motorcyle Mercosul format of Paraguay.
+```
+
+## ROADMAP ##
 
 New validators to be implemented.
 
