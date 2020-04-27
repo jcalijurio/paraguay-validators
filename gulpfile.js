@@ -3,13 +3,17 @@ const cmd = require('gulp-run-command').default;
 const del = require('del');
 const header = require('gulp-header');
 
-const banner = `/*
- * Paraguay Validators
- * License: MIT
- * author: Jorge Calijurio <jorge@calweb.com.br>
- * Project site: https://github.com/jcalijurio/paraguay-validators
-*/
-`;
+const pkg = require('./package.json');
+
+const banner = ['/**',
+    ' * <%= pkg.name %>',
+    ' * <%= pkg.description %>',
+    ' * @version v<%= pkg.version %>',
+    ' * @link <%= pkg.homepage %>',
+    ' * @license <%= pkg.license %>',
+    ' */',
+    ''
+].join('\n');
 
 task('copy', () =>
     src(['package.json', 'LICENSE', 'README.md'])
@@ -27,7 +31,7 @@ task('clean', cb =>
 );
 
 task('banner', () => src('./dist/paraguay-validators.min.js')
-    .pipe(header(banner))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(dest('./dist/'))
 );
 
