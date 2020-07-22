@@ -69,10 +69,3 @@ var oldPlateIsValid = validator.Plate.validateOldPlate('ABC123'); // Only old fo
 var carPlateIsValid = validator.Plate.validateCarPlate('ABCD123'); // Only new Car Mercosul format of Paraguay.
 var motoPlateValid = validator.Plate.validateMotorcyclePlate('123ABCD'); // Only new Motorcyle Mercosul format of Paraguay.
 ```
-
-## ROADMAP ##
-
-New validators to be implemented.
-
-  - Phone
-  - Postal Code
